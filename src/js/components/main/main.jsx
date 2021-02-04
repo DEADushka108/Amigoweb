@@ -5,7 +5,7 @@ const Main = () => {
   return <Fragment>
     <h1 className="visually-hidden">Форма регистрации</h1>
     <form className="login-form">
-      <fieldset>
+      <fieldset className="login-form__fieldset">
         <legend className="login-form__title">Регистрация</legend>
         <p className="login-form__text">
           <span>Уже есть аккаунт?</span>
@@ -34,8 +34,11 @@ const Main = () => {
             </select>
           </li>
           <li className="login-form__item">
-            <label className="login-form__label" htmlFor="agreement">Принимаю <a href="#" className="login-form__link">условия</a> использования</label>
+            <label className="login-form__checkbox-label" htmlFor="agreement">Принимаю <a href="#" className="login-form__link">условия</a> использования</label>
             <input className="login-form__checkbox" id="agreement" type="checkbox" required/>
+            <svg className="login-form__check-icon" width="22" height="16">
+              <use xlinkHref="#check"></use>
+            </svg>
           </li>
         </ul>
         <button className="login-form__button">Зарегистрироваться</button>

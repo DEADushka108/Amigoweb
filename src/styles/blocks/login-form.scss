@@ -1,0 +1,110 @@
+.login-form {
+  width: auto;
+  max-width: 460px;
+  margin: 0 auto;
+  border-radius: 24px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.login-form__fieldset {
+  border: none;
+}
+
+.login-form__title {
+  padding-top: 40px;
+  padding-left: 30px;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 34px;
+}
+
+.login-form__text {
+  padding: 0;
+  margin: 0;
+  padding-left: 30px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.login-form__link {
+  color: $text-blue;
+  padding-left: 4px;
+  text-decoration: none;
+}
+
+.login-form__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding-top: 56px;
+}
+
+.login-form__item:not(:last-child) {
+  display: flex;
+  width: auto;
+  margin-left: 30px;
+  margin-right: 30px;
+  flex-direction: column;
+  padding-bottom: 33px;
+}
+
+.login-form__item:last-child {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.login-form__item {
+  width: auto;
+  margin-left: 30px;
+  margin-right: 30px;
+  
+}
+
+.login-form__label {
+  color: $text-light-black;
+  font-weight: 300;
+}
+
+.login-form__input::placeholder {
+  color: $text-light-blue;
+}
+
+.login-form__input {
+  border-radius: 6px;
+  border: 1px solid $border-grey;
+  padding: 16px 16px 15px;
+  color: $text-black;
+}
+
+.login-form__checkbox-label {
+  padding-left: 70px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: 1px;
+    width: 38px;
+    height: 38px;
+    box-sizing: border-box;
+    border: solid 2px $border-grey;
+    background-color: $bg-white;
+    transform: translateY(50%);
+  }
+}
+
+.login-form__check-icon {
+  display: none;
+  position: absolute;
+  fill: $button-blue;
+  bottom: 50%;
+  left: 8px;
+  transform: translateY(50%);
+}
+
+.login-form__checkbox:checked + .login-form__check-icon {
+  display: block;
+}
