@@ -1,0 +1,47 @@
+.select {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.select__current-option {
+  padding-left: 16px;
+  font-weight: 300;
+  color: $text-light-blue;
+
+  &--active {
+    color: $text-black;
+  }
+}
+
+.select__options {
+  position: absolute;
+  width: 100%;
+  top: 74px;
+  border: 1px solid $border-grey;
+  border-radius: 6px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-top: 4px;
+  background-color: $bg-white;
+  z-index: 1;
+
+  &--hide {
+    display: none;
+  }
+}
+
+.select__option {
+  margin: 0;
+  padding: 12px 11px;
+  font-weight: 300;
+  
+  &:hover {
+    background-color: $bg-light-blue;
+  }
+
+  &--active {
+    background-color: $bg-light-blue;
+  }
+}

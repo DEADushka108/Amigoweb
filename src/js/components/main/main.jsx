@@ -1,7 +1,12 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
+import {Langs} from '../../utils/const';
 
 
 const Main = () => {
+  const [isValid, setValid] = useState(false);
+  const [isHide, setHide] = useState(true);
+  const [language, setLang] = useState(`Язык`);
+
   return <Fragment>
     <h1 className="visually-hidden">Форма регистрации</h1>
     <form className="login-form">
@@ -25,13 +30,20 @@ const Main = () => {
             <input className="login-form__input" id="user-phone" type="tel" name="phone" placeholder="Введите номер телефона" required/>
           </li>
           <li className="login-form__item">
-            <label className="login-form__label" htmlFor="lang">Язык</label>
-            <select className="login-form__input" id="lang" placeholder="Язык">
-              <option value="ru">Русский</option>
-              <option value="en">Английский</option>
-              <option value="cn">Китайский</option>
-              <option value="es">Испанский</option>
-            </select>
+            <span className="login-form__label">Язык</span>
+            <div className="login-form__input select" id="lang" onClick={() => {
+              setHide(!isHide);
+            }}>
+              <p className={language !== `Язык` ? `select__current-option select__current-option--active` : `select__current-option`}>{language}</p>
+            </div>
+            <div className={isHide ? `select__options select__options--hide` : `select__options`}>
+              {Langs.map((lang) => {
+                return <p key={lang.id} className={language === lang.lang ? `select__option select__option--active` : `select__option`} onClick={() => {
+                  setLang(lang.lang);
+                  setHide(!isHide);
+                }}>{lang.lang}</p>;
+              })}
+            </div>
           </li>
           <li className="login-form__item">
             <label className="login-form__checkbox-label" htmlFor="agreement">Принимаю <a href="#" className="login-form__link">условия</a> использования</label>
@@ -41,7 +53,7 @@ const Main = () => {
             </svg>
           </li>
         </ul>
-        <button className="login-form__button">Зарегистрироваться</button>
+        <button className="login-form__button" disabled={!isValid}>Зарегистрироваться</button>
       </fieldset>
     </form>
   </Fragment>;
