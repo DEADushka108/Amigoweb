@@ -133,4 +133,15 @@
   }
 }
 
+.login-form__dropdown-icon {
+  position: absolute;
+  right: 20px;
+  top: 45px;
+  fill: $button-blue;
+}
 
+.login-form__text-warning {
+  color: $text-error;
+  font-size: 14px;
+  line-height: 18px;
+}

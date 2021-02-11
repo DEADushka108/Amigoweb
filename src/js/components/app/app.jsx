@@ -3,6 +3,7 @@ import {Router, Switch, Route} from 'react-router-dom';
 import history from '../../history/history.js';
 import Main from '../main/main';
 import {AppRoute} from '../../utils/const.js';
+import InfoScreen from '../info-screen/info-screen.jsx';
 
 const App = () => {
 
@@ -11,6 +12,9 @@ const App = () => {
       <Switch>
         <Route exact path={`${AppRoute.ROOT}`}>
           <Main/>
+        </Route>
+        <Route exact path={`${AppRoute.INFO}`}>
+          <InfoScreen/>
         </Route>
       </Switch>
     </Router>

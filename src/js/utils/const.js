@@ -1,6 +1,9 @@
 export const AppRoute = {
   ROOT: `/`,
+  INFO: `/info`,
 };
+
+export const DEFAULT_LANG = `Язык`;
 
 export const Langs = [
   {
