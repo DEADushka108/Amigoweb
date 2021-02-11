@@ -134,7 +134,7 @@ const Main = (props) => {
             <svg className="login-form__check-icon" width="22" height="16">
               <use xlinkHref="#check"></use>
             </svg>
-            {!check && <p className="login-form__text-warning">Необходимо подтверждение</p>}
+            {!check && <p className="login-form__text-warning login-form__text-warning--checkbox">Необходимо подтверждение</p>}
           </li>
         </ul>
         <button className="login-form__button" disabled={!isValid}>Зарегистрироваться</button>
