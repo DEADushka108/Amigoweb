@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render InfoScreen component correctly 1`] = `
+Array [
+  <h1>
+    Отправленные данные
+  </h1>,
+  <div
+    className="select__options"
+  >
+    <p
+      className="select__option"
+    >
+      Имя: 
+      batman
+    </p>
+    <p
+      className="select__option"
+    >
+      Почта: 
+      batman@batman.net
+    </p>
+    <p
+      className="select__option"
+    >
+      Телефон: 
+      89000000000
+    </p>
+    <p
+      className="select__option"
+    >
+      Язык: 
+      English
+    </p>
+  </div>,
+]
+`;
