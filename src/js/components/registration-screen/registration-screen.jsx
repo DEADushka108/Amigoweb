@@ -89,21 +89,21 @@ const RegistrationScreen = (props) => {
             <input className="login-form__input" id="user-name" type="text" name="name" placeholder="Введите Ваше имя" required tabIndex="1"
               onChange={handleNameChange}
             />
-            {!isValidName && <p className="login-form__text-warning">Введено некореектное значение</p>}
+            {!isValidName && <p className="login-form__text-warning">Введено некорректное значение</p>}
           </li>
           <li className="login-form__item">
             <label className="login-form__label" htmlFor="user-email">Email</label>
             <input className="login-form__input" id="user-email" type="email" name="email" placeholder="Введите ваш email" required tabIndex="2"
               onChange={handleEmailChange}
             />
-            {!isValidEmail && <p className="login-form__text-warning">Введено некореектное значение</p>}
+            {!isValidEmail && <p className="login-form__text-warning">Введено некорректное значение</p>}
           </li>
           <li className="login-form__item">
             <label className="login-form__label" htmlFor="user-phone">Номер телефона</label>
             <input className="login-form__input" id="user-phone" type="tel" name="phone" placeholder="Введите номер телефона" required tabIndex="3"
               onChange={handlePhoneChange}
             />
-            {!isValidPhone && <p className="login-form__text-warning">Введено некореектное значение</p>}
+            {!isValidPhone && <p className="login-form__text-warning">Введено некорректное значение</p>}
           </li>
           <li className="login-form__item">
             <span className="login-form__label">Язык</span>
