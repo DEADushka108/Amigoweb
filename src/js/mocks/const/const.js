@@ -1,11 +1,11 @@
-export const AppRoute = {
+const AppRoute = {
   ROOT: `/`,
   INFO: `/info`,
 };
 
-export const DEFAULT_LANG = `Язык`;
+const DEFAULT_LANG = `Язык`;
 
-export const LANGS = [
+const LANGS = [
   {
     id: 1,
     lang: `Русский`
@@ -23,3 +23,5 @@ export const LANGS = [
     lang: `Español`
   }
 ];
+
+export {AppRoute, LANGS, DEFAULT_LANG};
