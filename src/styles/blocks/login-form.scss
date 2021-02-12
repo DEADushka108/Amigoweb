@@ -83,9 +83,11 @@
   padding: 16px 16px 15px;
   color: $text-black;
 
-  &:focus {
+  &:focus,
+  &:hover {
     border: 2px solid $border-blue;
     box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+    padding: 15px 15px 14px;
   }
 
   &:active {
@@ -108,6 +110,10 @@
     border-radius: 4px;
     background-color: transparent;
     transform: translateY(50%);
+  }
+
+  &:hover::before {
+    border: 2px solid $border-blue;
   }
 }
 
@@ -152,6 +158,8 @@
 
   &:active {
     border: 2px solid rgba(44, 39, 56, 0.86);
+    padding-top: 16px;
+    padding-bottom: 18px;
   }
 }
 

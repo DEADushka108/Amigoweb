@@ -24,16 +24,19 @@ const Main = (props) => {
   const [check, setCheck] = useState(true);
 
   const handleNameChange = useCallback((evt) => {
+    setHide(true);
     setName(evt.target.value);
     setValid(isValidEmail && isValidName && isValidPhone);
   }, [name, email, phone]);
 
   const handleEmailChange = useCallback((evt) => {
+    setHide(true);
     setEmail(evt.target.value);
     setValid(isValidEmail && isValidName && isValidPhone);
   }, [email, name, phone]);
 
   const handlePhoneChange = useCallback((evt) => {
+    setHide(true);
     setPhone(evt.target.value);
     setValid(isValidEmail && isValidName && isValidPhone);
   }, [phone, name, email]);
@@ -64,6 +67,7 @@ const Main = (props) => {
       firstRender.current = false;
       return;
     }
+    setHide(true);
     setValidName(validateName(name));
     setValidEmail(validateEmail(email));
     setValidPhone(validatePhone(phone));
@@ -103,7 +107,7 @@ const Main = (props) => {
           </li>
           <li className="login-form__item">
             <span className="login-form__label">Язык</span>
-            <div className="login-form__input select" id="lang" tabIndex="4"
+            <div className="login-form__select select" id="lang" tabIndex="4"
               onClick={() => {
                 setHide(!isHide);
               }}
