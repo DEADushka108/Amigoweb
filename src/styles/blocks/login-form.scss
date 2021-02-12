@@ -117,6 +117,10 @@
   }
 }
 
+.login-form__checkbox:checked + .login-form__checkbox-label::before {
+  border: 2px solid $border-blue;
+}
+
 .login-form__checkbox {
   display: none;
 }
@@ -131,7 +135,7 @@
   z-index: -1;
 }
 
-.login-form__checkbox:checked + .login-form__check-icon {
+.login-form__checkbox:checked ~ .login-form__check-icon {
   display: block;
   fill: $button-blue;
 }
