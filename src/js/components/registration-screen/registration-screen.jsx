@@ -1,12 +1,12 @@
 import React, {Fragment, useState, useCallback, useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
-import {AppRoute, DEFAULT_LANG, Langs} from '../../utils/const';
+import {AppRoute, DEFAULT_LANG, LANGS} from '../../utils/const';
 import {validateEmail, validateName, validatePhone} from '../../utils/utils';
 import {ActionCreator as UserCreator} from '../../store/user/user';
 import {redirectToRoute} from '../../store/redirect/redirect';
 import {connect} from 'react-redux';
 
-const RegisrationScreen = (props) => {
+const RegistrationScreen = (props) => {
   const {onFormSubmit, onSuccessFormSubmit} = props;
   const firstRender = useRef(true);
   const form = useRef();
@@ -119,7 +119,7 @@ const RegisrationScreen = (props) => {
             </div>
             {!isValidLang && <p className="login-form__text-warning">Выберите из списка</p>}
             <div className={isHide ? `select__options select__options--hide` : `select__options`}>
-              {Langs.map((lang) => {
+              {LANGS.map((lang) => {
                 return <p key={lang.id}
                   className={language === lang.lang ? `select__option select__option--active` : `select__option`}
                   onClick={() => {
@@ -135,7 +135,6 @@ const RegisrationScreen = (props) => {
           <li className="login-form__item">
             <input className="login-form__checkbox" ref={checkbox} id="agreement" type="checkbox" onClick={(evt) => setCheck(evt.target.checked)}/>
             <label className="login-form__checkbox-label" htmlFor="agreement">Принимаю <a href="#" className="login-form__link">условия</a> использования</label>
-            {/* <input className="login-form__checkbox" ref={checkbox} id="agreement" type="checkbox" onClick={(evt) => setCheck(evt.target.checked)}/> */}
             <svg className="login-form__check-icon" width="22" height="16">
               <use xlinkHref="#check"></use>
             </svg>
@@ -148,7 +147,7 @@ const RegisrationScreen = (props) => {
   </Fragment>;
 };
 
-RegisrationScreen.propTypes = {
+RegistrationScreen.propTypes = {
   onFormSubmit: PropTypes.func.isRequired,
   onSuccessFormSubmit: PropTypes.func.isRequired,
 };
@@ -162,5 +161,5 @@ const mapDispatchToProps = (dispatch) => ({
   },
 });
 
-export {RegisrationScreen};
-export default connect(null, mapDispatchToProps)(RegisrationScreen);
+export {RegistrationScreen};
+export default connect(null, mapDispatchToProps)(RegistrationScreen);
